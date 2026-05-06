@@ -10,4 +10,4 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
       - run: npm ci
-      - run: npx nx run-many -t lint -t test
+      - run: npx nx run-many -t lint -t test -t docker:build
