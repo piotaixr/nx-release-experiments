@@ -9,5 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
+      - uses: docker/setup-buildx-action@v4
       - run: npm ci
       - run: npx nx run-many -t lint -t test -t docker:build
